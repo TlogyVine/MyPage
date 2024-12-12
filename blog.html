@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="have_right_colume" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<title>Algorithms | Blog</title>
+	
+	<meta name="description" content="Algorithm Learning Website">
+	<meta name="author" content="TlogyVine">
+
+	<link rel="icon" type="image/png" href="./images/icons/QianNian_white.ico">
+	<link rel="stylesheet" href="./style.css" media="screen" />
+	<script src="function.js"></script>
+	<script src="blog.js"></script>
+</head>
+<body class="liquid light">
+
+<div id="wrapper">
+
+	<!-- ------------------ - Container - ------------------ -->
+	
+	<section class="container">
+
+		<!-- ------------------ - Header - ------------------ -->
+		
+		<header id="header" class="clearfix">
+			
+			<div id="logo">
+				<h1><a href="./index.html">Explore</a></h1>
+				<div class="slogan"><span>Revealing the mysteries of the world</span></div><!--/ .slogan-->
+			</div><!--/ #logo-->
+			
+			<nav id="navigation" class="navigation">
+				<ul>
+					<li><a href="./index.html">Home</a></li>
+					<li class="current"><a href="./blog.html">Blog</a></li>
+					<li><a href="./contacts.html">Contact</a></li>
+					<li><a href="./login.html">Login</a></li>
+				</ul>
+			</nav><!--/ #navigation-->
+			
+		</header><!--/ #header-->
+		
+		<!-- ------------------ - END Header - ------------------ -->
+		
+		<div class="content-wrapper sbr clearfix">
+			
+			
+			<div class="page-header clearfix">
+				
+				<h1 class="alignleft">Single Post</h1>
+				
+				<div class="search-container">
+					<form id="search" action="/">
+						<input placeholder="Search" type="text" />
+						<button type="submit"></button>
+					</form><!--/ #search-->
+				</div><!--/ .search-container-->
+				
+			</div><!--/ .page-header-->
+			
+			
+			<section id="content">
+				
+				<article class="post-item clearfix">
+					
+					<a class="single-image picture-icon" href="./images/library/JinHu.jpg">
+						<img class="entry-image" src="./images/library/Home_inJinHu.jpg" alt="" />
+					</a>
+					
+					<div class="image-title clearfix">
+						<h2>
+							<span class="post-type picture"></span>
+							 Algorithm Book Updated (1) : New Specification
+						</h2>
+					</div><!--/ .image-title-->
+					<div class="one-sixth">
+
+						<div class="meta-entry">
+							<div class="slide-thumb"><img alt="Thumbnail" src="./images/designer/TlopyVine.jpg" /></div><!--/ .slide-thumb-->
+
+							<a href="#" class="date"><span>2024/12/02</span></a>
+							<a href="#" class="author"><span>TlogyVine</span></a>
+							<span class="category">
+								Label:
+								<a href="#">C++</a>
+								<a href="#">struct</a>
+							</span>
+						</div><!--/ .meta-entry-->
+					</div><!--/ .one-sixth-->
+					
+					<div class="entry-body">
+						<p>1、 Pay attention to 'stack overflow', main is extremely fragile! (Warning)</p>
+						<p>
+							The main can only hold about 4MB of data, and an int array with a length of 1E6 can easily explode it
+							Especially in the case of "engineering problems", it allows you to perfect a structure. Note that it is important to check whether the instance of the structure is actually running on the stack!
+						</p>
+						
+						<p>
+							How can you look at it?
+							If the official provides the code for instantiation of the structure,
+							you can determine it based on its location.
+							As long as it is not initialized at a global location,
+							not dynamically applied, or the outer class is not dynamically applied,
+							it is considered to be running on the stack.
+							What if the official code for instantiation is not provided?
+							Then 'assume' that it runs on the stack,
+							and write code based on this premise thereafter.
+						</p>
+						
+						<blockquote class="quote-text">
+							If it runs on the stack,
+							avoid allocating too much static space within the structure!
+							For instance, the aforementioned 1E6_int array,
+							if included, will definitely cause a stack overflow.
+							Even if a single instance doesn't overflow,
+							if multiple instances are instantiated,
+							it will still overflow.
+						</blockquote>
+						
+						<p>
+							So, what's our solution?
+							I recommend using STL containers like vectors,
+							which allocate memory on the heap.
+							You may have heard that continuous push_down in vectors can reduce performance and resist using them.
+							My opinion on this is: so foolish!
+							you solve problems narrowly,
+							so why bother with performance?
+							Remember, premature optimization is the root of all evils!
+						</p>
+						
+						<a class="button-style-1 small" onclick="scrollToSection('respond')">Leave a Comment</a>
+						
+					</div><!--/ .entry-body-->
+					
+				</article><!--/ .post-item-->
+				
+		
+				<div class="page-title clearfix">
+
+					<div class="pagination">
+						<a href="#" class="prev-project">Previous Post</a><!--/ .prev-project-->
+						<a href="#" class="next-project">Next Post</a><!--/ .next-project-->
+					</div><!--/ .pagination-->
+
+				</div><!--/ .page-title-->
+				
+				
+				<!-- 评论将显示在这里 -->
+				<section id="comments">
+					
+					<h3>Comments</h3>
+					<button class="square-1" onclick="loadComments()">Load Comments</button>
+					<ol class="comments-list" id="comments-list"></ol>
+
+				</section><!--/ #comments-->
+				
+				
+				<section id="respond">
+					<h3 class="content-title" >Leave a Comment</h3>
+					
+					<p>If you wish to say something, simply click the "submit comment" button.</p>
+					
+					<form action="" class="comments-form" id="commentForm">
+						
+						<fieldset class="textarea-block">
+							<textarea name="message" placeholder="Message (required)" id="comment-message" required></textarea>
+						</fieldset>
+						
+						<button class="button-style-2 medium" type="button" onclick="saveComment()">Submit Comment</button>
+						<div class="clear"></div>
+					</form><!--/ .comments-form-->
+				</section><!--/ #respond-->
+				
+			</section><!--/ #content-->
+
+			
+			
+			<!-- ------------------ - Sidebar - ------------------ -->
+			
+			<aside id="sidebar">
+				
+				<div class="widget">
+					
+					<h1 class="widget-title">Categories</h1>
+
+					<ul class="feature-menu">
+						<li><a href="./index.html">About Us</a></li>
+					</ul><!--/ .feature-menu-->	
+					
+				</div><!--/ .widget-->
+				
+				
+				<div class="widget">
+					
+					
+					<!-- ------------------ - Tabs Container - ------------------ -->
+					
+					<div class="aside-tabs">
+						<button class="square-1" onclick="scrollToSection('respond')">Leave a Comment</button>
+					</div>	
+					
+				</div><!--/ .widget-->
+				
+				
+				<div class="widget">
+					
+					<h1 class="content-title">Latest progress</h1>
+					
+					<ul class="latest">
+						<li>
+							<a href="#">
+								<img alt="" src="./images/activities/工程题.bmp">
+								<h3 class="title">New Specification</h3>
+								<span class="desc">After completing the CACC exam, I summarized some terms that are perfect for writing into the book...</span>
+								<p></p>
+							</a>		
+						</li>
+						<li>
+							<a href="#">
+								<img alt="" src="./images/activities/快捷键.bmp">
+								<h3 class="title">New Shortcut Keys</h3>
+								<span class="desc">Super powerful shortcut keys are coming, no longer troubled by complex interfaces...</span>
+								<p></p>
+							</a>		
+						</li>
+						<li>
+							<a href="#">
+								<img alt="" src="./images/activities/范浩强.bmp">
+								<h3 class="title">New Tree Structure</h3>
+								<span class="desc">A tree that doesn't require rotation! Relying solely on peers to complement each other...</span>
+							</a>		
+						</li>
+					</ul>
+					<div class="latest-controls">
+						<a href="#" id="prev"></a>
+						<a href="#" id="next"></a>
+					</div>
+
+				</div><!--/ .widget-->
+				<div class="widget">
+					<h1 class="widget-title"> Our Book</h1>
+					<ul class="feature-menu">
+						<li><a href="./book/算法书（最新测试版）20241203a.pdf">Algorithm Book (latest beta version) 20241203a</a></li>
+						<li><a href="./book/算法书（CACC特别篇）20241129b.pdf">Algorithm Book (CACC Special Edition) 20241129b</a></li>
+						<li><a href="./book/算法书（百页庆典）20241022.pdf">Algorithm Book (Hundred Page Celebration) 20241022c</a></li>
+					</ul>
+				</div><!--/ .widget-->
+				<div class="widget">
+					
+					<h1 class="content-title">Recent Comments</h1>
+					
+					<ul class="recent-comments">
+						<li><a href="#" class="author">LemCPN</a>&nbsp;<small>:</small>&nbsp;<a href="#">After all, it's the ...</a></li>
+						<li><a href="#" class="author">PhanDict</a>&nbsp;<small>:</small>&nbsp;<a href="#">vector&ltbool&gt is no...</a></li>
+					</ul><!--/ .recent-comments-->
+					
+				</div><!--/ .widget-->
+				
+			</aside><!--/ #sidebar-->
+			
+			<!-- ------------------ - END Sidebar - ------------------ -->
+			
+			
+		</div><!--/ .content-wrapper-->
+
+
+		<!-- ------------------ - Main Footer - ------------------ -->
+		
+		<footer id="footer" class="clearfix">
+			
+			<div class="one-half">
+				
+				<nav id="footer-nav" class="clearfix">
+					<ul>
+						<li><a href="./index.html">Home</a></li>
+						<li><a href="./blog.html">Blog</a></li>
+						<li><a href="./contacts.html">Contact</a></li>
+						<li><a href="./login.html">Login</a></li>			
+					</ul>
+				</nav><!--/ #footer-nav-->
+				
+				<div class="copyright">&copy; 2024 There are no terms here. Non-commercial use.</div><!--/ .copyright-->
+				
+			</div><!--/ .one-half-->
+		</footer>
+		
+		<!-- ------------------ - END Footer - ------------------ -->	
+
+		
+	</section><!--/ .container-->
+	
+	<!-- ------------------ - END Container - ------------------ -->
+	
+</div><!--/ #wrapper-->
+</body>
+</html>
+

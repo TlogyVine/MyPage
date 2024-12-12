@@ -1,0 +1,303 @@
+/* Set margin font */
+*{
+    padding: 0;
+    margin: 0;
+}
+.content_login{
+    width: 960px;
+    height: 600px;
+    background-color: none;
+    font-family: "Arial",sans-serif;
+    position: relative;
+}
+.content_login .login-wrapper{
+    width:  940px;
+    height: 560px;
+    background-color: #fbfbfb;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* Element alignment */
+    transform: translate(-50%,-50%);
+    /* Set up elastic layout */
+    display: flex;
+}
+.left-img{
+    border-radius:10px;
+    color: #624949;
+    flex: 1;
+    background: url(./images/asset/dynamics.gif) no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+.content_login .login-wrapper .left-img .glass{
+    width: 60%;
+    padding: 20px;
+    color: #fff;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+    background-color: rgba(255, 255, 255, 0.1);
+
+    box-shadow: 0 8px 32px 0 rgba(31, 38,135, 0.7);
+    backdrop-filter: blur(10px);
+    /* Old browser settings */
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.48);
+}
+.content_login .login-wrapper .left-img .glass .tips .title{
+    width: 25%;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38,135, 0.37);
+    backdrop-filter: blur(10px);
+    /* Old browser settings */
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.48);
+}
+.form-wrapper{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+.content_login .login-wrapper .left-img .glass .tips h1{
+    margin: 15px 0;
+}
+.content_login .login-wrapper .left-img .glass .tips span{
+    margin: 5px 0;
+    display: block;
+    font-family: 100;
+}
+.content_login .login-wrapper .right-login-form{
+    flex: 1;
+    position: relative;
+}
+.content_login .login-wrapper .right-login-form .form-wrapper h1{
+    font-size: 30px;
+    text-align: center;
+}
+.content_login .login-wrapper .right-login-form .form-wrapper .input-items{
+    margin: 20px 0;
+}
+.input-tips{
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 10px 0;
+}
+.inputs{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid rgb(227, 227, 227);
+    padding:  20px;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.5s;
+}
+.inputs:focus{
+    border: 1px solid rgb(192, 106, 196);
+
+}
+.forgot{
+    float: right;
+    font-weight: 600;
+    text-align: right;
+    margin: 5px 0;
+    font-size: 13px;
+    cursor: pointer;
+}
+.btn{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.6);;
+    transition: background-color 0.1s;
+    border: 0;
+    border-radius: 5px;
+    color:#fff;
+    font-size: 25px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.516);
+}
+.siginup-tips{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.bon{
+    color: rgb(244, 130, 31);
+    cursor: pointer;
+    letter-spacing: 1px;
+    
+}
+.divider{
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.line{
+    display: inline-block;
+    max-width: 35%;
+    width: 35%;
+    flex: 1;
+    height: 1px;
+    background-color: rgb(162 ,172, 185);
+
+}
+.divider-text{
+    vertical-align: middle;
+    margin: 0 20px;
+    display: inline-block;
+    width: 50px;
+    color: rgb(150, 172, 185);
+
+}
+.other-login-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.other-login-item{
+    width: 70px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    color: rgb(51, 59, 116);
+    margin: 0 10px;
+    transition: 0.4s;
+}
+.other-login-item img{
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+.other-login-item span{
+     vertical-align: middle;
+}
+.other-login-item:hover{
+    width: 80px;
+    height: 50px;
+    background-color: #fff;
+    border: 0;
+    box-shadow: 1px 10px 32px 1px rgba(186, 175, 221, 0.37);
+
+}
+
+/* Media inquiry */
+@media only screen and (max-width: 959px){
+    .content_login{
+        width: 590px;
+        height: 600px;
+        position: relative;
+    }
+    .content_login .login-wrapper{
+        width:  940px;
+        height: 560px;
+        left: 62%;
+        top: 50%;
+    }
+    .login-wrapper{
+        padding: 20px;
+    }
+    .left-img{
+        display: none;
+    }
+    .right-login-form{
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+
+    .form-wrapper{
+        margin: 10px 0;
+    }
+    .content_login{
+        width: 440px;
+        height: 500px;
+        position: relative;
+    }
+    .content_login .login-wrapper{
+        width:  440px;
+        height: 560px;
+        left: 35%;
+        top: 50%;
+    }
+    
+    .login-wrapper{
+        padding: 10px;
+    }
+    .left-img{
+        display: none;
+    }
+    .right-login-form{
+        padding: 20px;
+    }
+}
+
+.box{
+    height: 300px;
+    width: 200px;
+    margin: 20px auto;
+}
+.box>input{
+    margin-left: 50px;
+}
+#code{
+    background:#eee;
+    font-size: 25px;
+    margin-right: 6px;
+    color: blue;
+    cursor: pointer;
+}
+.show{
+    height: 40px;
+    width: auto;
+}
+.show button{
+    height: 30px;
+    background-color: #eee;
+    border: black solid 1px;
+    border-radius: 10px;
+    font-size: 10px;
+}
+.input{
+    height: 40px;
+    width: auto;
+    margin-top: 10px;
+}
+.input label{
+    float: left;
+    margin-right: 10px;
+    font-size: 20px;
+}
+#checkCode{
+    width: 80px;
+    height: 20px;
+    float: left;
+}
+.rvj{
+    color: rgb(246, 244, 244);
+}

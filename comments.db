@@ -1,0 +1,64 @@
+
+<li class="comment">
+
+    <article>
+        <img src="images/user/LemCPN.jpg" alt="Image" class="avatar">
+        <div class="comment-meta">
+            <h4 class="author"><a href="#">LemCPN</a></h4>
+            <div class="date">12/02/2024 at 1:35 pm</div>
+            <div class="reply"><a class="button-style-1 small" href="#">Reply</a></div>
+        </div><!--/ .comment-meta -->
+        <div class="comment-body">
+            <p>
+                After all, it's the first CACC, and everyone is uncertain about the situation.
+                From the tone, you must have suffered a big loss in the exam,
+                how did you do. How difficult is it?
+            </p>
+        </div><!--/ .comment-body -->
+    </article>
+
+    <ul class="children">
+
+        <li class="comment">
+
+            <article>
+                <img src="images/user/TlogyVine.jpg" alt="Image" class="avatar">
+                <div class="comment-meta">
+                    <h4 class="author"><a href="#">TlogyVine</a></h4>
+                    <div class="date">12/02/2024 at 8:10 pm</div>
+                    <div class="reply"><a class="button-style-1 small" href="#">Reply</a></div>
+                </div><!--/ .comment-meta -->
+                <div class="comment-body">
+                    <p>The lack of a compiler in the exam room made me feel foolish,
+                    which added a lot of difficulty to the exam.
+                    However, it's surprisingly easy in general, although the question may seem difficult,.</p>
+                </div><!--/ .comment-body -->
+            </article>
+
+        </li>
+
+    </ul><!-- end .children -->
+
+</li><!--/ .children-->
+
+<li class="comment">
+
+    <article>
+        <img src="images/user/PhanDict.jpg" alt="Image" class="avatar">
+        <div class="comment-meta">
+            <h4 class="author"><a href="#">PhanDict</a></h4>
+            <div class="date">12/03/2024 at 3:10 am</div>
+            <div class="reply"><a class="button-style-1 small" href="#">Reply</a></div>
+        </div><!--/ .comment-meta -->
+        <div class="comment-body">
+            <p>
+                vector&ltbool&gt is not a container.
+                This should be pointed out. Otherwise
+                using vectors may lead to bugs.
+            </p>
+        </div><!--/ .comment-body -->
+    </article>
+
+</li><!--/ .children-->
+
+<!-- Take the new comment to the next line -->
